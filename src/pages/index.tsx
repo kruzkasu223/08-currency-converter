@@ -85,6 +85,14 @@ const Home: NextPage = () => {
           </div>
         )}
 
+        {!currenciesList && !isError && (
+          <div className="mt-10 flex flex-col items-center">
+            <progress className="progress progress-accent w-56"></progress>
+            <p className="m-2 text-xl">Loading...</p>
+            <progress className="progress progress-accent w-56"></progress>
+          </div>
+        )}
+
         {currenciesList && (
           <div className="flex flex-col gap-8">
             <div className="flex items-center gap-14">
